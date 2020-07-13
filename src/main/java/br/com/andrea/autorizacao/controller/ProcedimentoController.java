@@ -16,7 +16,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -46,12 +45,6 @@ public class ProcedimentoController {
 
         return new ResponseEntity<Procedimento>(this.procedimentoService.save(procedimento), HttpStatus.CREATED);
     }
-
-    //@PutMapping
-    //@ApiOperation("Atualiza um parâmetro de autorização de procedimento.")
-    //public ResponseEntity<Procedimento> update(@Valid @RequestBody Procedimento procedimento) {
-    //    return new ResponseEntity<Procedimento>(this.procedimentoService.save(procedimento), HttpStatus.ACCEPTED);
-    //}
 
     @GetMapping
     @ApiOperation("Lista todos os parâmetros para autorização de procedimentos")
@@ -93,9 +86,7 @@ public class ProcedimentoController {
             if (permitido) return "SIM";
             return "NAO";
         }
-
         return "NAO";
-        //return procedimentoDTO = ProcedimentoMapper.INSTANCE.map((List<Procedimento>) procedimentoService.findByProcedimenoAndIdadeAndSexo(codProcedimento, idade, sexo, pageable));
     }
 
 }
