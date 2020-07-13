@@ -48,4 +48,5 @@ Saída:
 
 #### Informações para o client acessar a API :
 - #### URI de acesso : https://autorizacao-procedimento.herokuapp.com/
-- #### Documentção da Api: 
+- #### Documentção da Api:  https://autorizacao-procedimento.herokuapp.com/swagger-ui.html#
+- #### Banco de Dados : h2 em memória 
